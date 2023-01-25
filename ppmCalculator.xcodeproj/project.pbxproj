@@ -13,6 +13,7 @@
 		65618F75297D61540070726F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65618F73297D61540070726F /* Main.storyboard */; };
 		65618F77297D61550070726F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65618F76297D61550070726F /* Assets.xcassets */; };
 		65618F7A297D61550070726F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65618F78297D61550070726F /* LaunchScreen.storyboard */; };
+		65618F87297D62A40070726F /* calculatorPPM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65618F86297D62A40070726F /* calculatorPPM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		65618F76297D61550070726F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65618F79297D61550070726F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65618F7B297D61550070726F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65618F86297D62A40070726F /* calculatorPPM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calculatorPPM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,56 @@
 		65618F6C297D61540070726F /* ppmCalculator */ = {
 			isa = PBXGroup;
 			children = (
-				65618F6D297D61540070726F /* AppDelegate.swift */,
-				65618F6F297D61540070726F /* SceneDelegate.swift */,
-				65618F71297D61540070726F /* ViewController.swift */,
-				65618F73297D61540070726F /* Main.storyboard */,
-				65618F76297D61550070726F /* Assets.xcassets */,
-				65618F78297D61550070726F /* LaunchScreen.storyboard */,
-				65618F7B297D61550070726F /* Info.plist */,
+				65618F85297D626E0070726F /* Models */,
+				65618F84297D62420070726F /* App */,
+				65618F82297D61C40070726F /* ViewControllers */,
+				65618F81297D61AD0070726F /* Storyboards */,
+				65618F83297D61DB0070726F /* Resources */,
 			);
 			path = ppmCalculator;
+			sourceTree = "<group>";
+		};
+		65618F81297D61AD0070726F /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				65618F73297D61540070726F /* Main.storyboard */,
+				65618F78297D61550070726F /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		65618F82297D61C40070726F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				65618F71297D61540070726F /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		65618F83297D61DB0070726F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				65618F76297D61550070726F /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		65618F84297D62420070726F /* App */ = {
+			isa = PBXGroup;
+			children = (
+				65618F6D297D61540070726F /* AppDelegate.swift */,
+				65618F6F297D61540070726F /* SceneDelegate.swift */,
+				65618F7B297D61550070726F /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		65618F85297D626E0070726F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				65618F86297D62A40070726F /* calculatorPPM.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65618F72297D61540070726F /* ViewController.swift in Sources */,
+				65618F87297D62A40070726F /* calculatorPPM.swift in Sources */,
 				65618F6E297D61540070726F /* AppDelegate.swift in Sources */,
 				65618F70297D61540070726F /* SceneDelegate.swift in Sources */,
 			);
@@ -289,22 +333,27 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = K7N4M559X6;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ppmCalculator/Info.plist;
+				INFOPLIST_FILE = ppmCalculator/App/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.cakedevart.ppmCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -317,22 +366,27 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = K7N4M559X6;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ppmCalculator/Info.plist;
+				INFOPLIST_FILE = ppmCalculator/App/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.cakedevart.ppmCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
